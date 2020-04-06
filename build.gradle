@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'org.sasdutta'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation group: 'com.h2database', name: 'h2', version: '1.4.200'
+
+    def log4jVersion = "2.13.1"
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: "${log4jVersion}"
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: "${log4jVersion}"
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: "${log4jVersion}"
+}
